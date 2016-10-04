@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Doseunit Convertions</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>From doseunit</th>
+      <th>To doseunit</th>
+      <th>Conv factor</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_doseunit_convertions.each do |dis_doseunit_convertion| %>
+      <tr>
+        <td><%= dis_doseunit_convertion.id %></td>
+        <td><%= dis_doseunit_convertion.from_doseunit_id %></td>
+        <td><%= dis_doseunit_convertion.to_doseunit_id %></td>
+        <td><%= dis_doseunit_convertion.conv_factor %></td>
+        <td><%= dis_doseunit_convertion.status_id %></td>
+        <td><%= link_to 'Show', dis_doseunit_convertion %>,<%= link_to 'Edit', edit_dis_doseunit_convertion_path(dis_doseunit_convertion) %>,<%= link_to 'Destroy', dis_doseunit_convertion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Doseunit Convertion', new_dis_doseunit_convertion_path %>

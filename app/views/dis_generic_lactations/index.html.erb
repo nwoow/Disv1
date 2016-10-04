@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Generic Lactations</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Generic</th>
+      <th>Description</th>
+      <th>Datasource</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_generic_lactations.each do |dis_generic_lactation| %>
+      <tr>
+        <td><%= dis_generic_lactation.generic_id %></td>
+        <td><%= dis_generic_lactation.description %></td>
+        <td><%= dis_generic_lactation.datasource_id %></td>
+        <td><%= dis_generic_lactation.status_id %></td>
+        <td><%= link_to 'Show', dis_generic_lactation %>,<%= link_to 'Edit', edit_dis_generic_lactation_path(dis_generic_lactation) %>,<%= link_to 'Destroy', dis_generic_lactation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Generic Lactation', new_dis_generic_lactation_path %>

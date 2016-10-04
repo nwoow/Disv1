@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Generic:</strong>
+  <%= @dis_generic_lactation.generic_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dis_generic_lactation.description %>
+</p>
+
+<p>
+  <strong>Datasource:</strong>
+  <%= @dis_generic_lactation.datasource_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_generic_lactation.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_generic_lactation_path(@dis_generic_lactation) %> |
+<%= link_to 'Back', dis_generic_lactations_path %>

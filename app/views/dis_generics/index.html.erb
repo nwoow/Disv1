@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<h1>DisGeneric</h1>
+<table id="DisGeneric" , data-source="<%= dis_generics_path(format: :json) %>"class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+       
+         <th>name</th>
+        
+         <th>is_combination</th>
+        
+         <th>rxcui</th>
+        
+         <th>status_id</th>
+        
+         <th>food_id</th>
+        
+         <th>hepatic_id</th>
+        
+         <th>renal_imp_id</th>
+        
+         <th>release_status_id</th>
+        
+         <th>is_essential</th>
+        
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Generic', new_dis_generic_path %>

@@ -1,0 +1,13 @@
+<%= simple_form_for(@combination_dose) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :combination_dose_id %>
+    <%= f.input :combination_dose_name %>
+    <%= f.input :status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<%= simple_form_for(@combination_content) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :combination_contents_id %>
+    <%= f.input :combination_generic_id %>
+    <%= f.input :constituent_generic_id %>
+    <%= f.input :constituent_strength %>
+    <%= f.input :uom_id %>
+    <%= f.input :combination_dose_id %>
+    <%= f.input :data_source_id %>
+    <%= f.input :status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

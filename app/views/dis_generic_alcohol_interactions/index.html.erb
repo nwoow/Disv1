@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Generic Alcohol Interactions</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Generic</th>
+      <th>Alcohol interaction</th>
+      <th>Status</th>
+      <th>Datasource</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_generic_alcohol_interactions.each do |dis_generic_alcohol_interaction| %>
+      <tr>
+        <td><%= dis_generic_alcohol_interaction.generic_id %></td>
+        <td><%= dis_generic_alcohol_interaction.alcohol_interaction_id %></td>
+        <td><%= dis_generic_alcohol_interaction.status_id %></td>
+        <td><%= dis_generic_alcohol_interaction.datasource_id %></td>
+        <td><%= link_to 'Show', dis_generic_alcohol_interaction %>,<%= link_to 'Edit', edit_dis_generic_alcohol_interaction_path(dis_generic_alcohol_interaction) %>,<%= link_to 'Destroy', dis_generic_alcohol_interaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Generic Alcohol Interaction', new_dis_generic_alcohol_interaction_path %>

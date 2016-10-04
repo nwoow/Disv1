@@ -1,0 +1,1 @@
+json.extract! @combination_content, :id, :combination_contents_id, :combination_generic_id, :constituent_generic_id, :constituent_strength, :uom_id, :combination_dose_id, :data_source_id, :status, :created_at, :updated_at

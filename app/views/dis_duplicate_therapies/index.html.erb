@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Duplicate Therapies</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Generic id1</th>
+      <th>Generic id2</th>
+      <th>Status</th>
+      <th>Datasource</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_duplicate_therapies.each do |dis_duplicate_therapy| %>
+      <tr>
+        <td><%= dis_duplicate_therapy.generic_id1 %></td>
+        <td><%= dis_duplicate_therapy.generic_id2 %></td>
+        <td><%= dis_duplicate_therapy.status_id %></td>
+        <td><%= dis_duplicate_therapy.datasource_id %></td>
+        <td><%= link_to 'Show', dis_duplicate_therapy %>,<%= link_to 'Edit', edit_dis_duplicate_therapy_path(dis_duplicate_therapy) %>,<%= link_to 'Destroy', dis_duplicate_therapy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Duplicate Therapy', new_dis_duplicate_therapy_path %>

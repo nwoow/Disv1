@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Foodintakes</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_foodintakes.each do |dis_foodintake| %>
+      <tr>
+        <td><%= dis_foodintake.id %></td>
+        <td><%= dis_foodintake.description %></td>
+        <td><%= dis_foodintake.status_id %></td>
+        <td><%= link_to 'Show', dis_foodintake %>,<%= link_to 'Edit', edit_dis_foodintake_path(dis_foodintake) %>,<%= link_to 'Destroy', dis_foodintake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add New', new_dis_foodintake_path %>

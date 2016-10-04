@@ -1,0 +1,44 @@
+####### RAILS COMMANDS #################
+
+# Generate full scaffold
+$ rails generate scaffold Status id:serial name:string
+
+# Remove scaffold
+$ rails destroy scaffold dis_generics
+
+# Generate scaffold without migration
+rails generate scaffold DisDoseperiod name:string abbrev:string is_common:boolean status_id:integer datasource_id:integer --migration=false
+
+
+rails generate scaffold DisBrandname id:integer name:string release_status_id:integer status_id:integer  --migration=false
+
+#If you want to rollback migration then use :
+$ rake db:migrate:down VERSION=20160328091148
+#If you want to rollup specific version use this :
+$ rake db:migrate:up VERSION=20160328091148
+
+#Drop the database completely and recreate from migrate scripts.
+#All data will be lost. Fresh set of tables will be created.
+$ rake db:drop
+$ rake db:create db:migrate
+
+#Add a migration
+$ rails generate migration genericsAddColumn
+#edit created migration file and add required commands and then execute migration
+$ rake db:migrate
+
+# Steps to setup server side fetching/sorting/pagination
+# https://github.com/antillas21/ajax-datatables-rails
+$ rails generate datatable User
+
+1. Create scaffolding without migration
+2. Setup view forms for crud
+3. run command 'rails generate datatable <ModelName>'
+4. Go to index file and change table id to table name. Example see index.html.erb of combination_contents. ID can be anything unique, but ModelName is preferrable.
+5. Add the same id in the file under assets>javascript folder
+6. Go to datatables folder and edit the file with the ModelName. sample combination_content_datatable.rb
+
+#To create ajax data rails
+
+
+rails generate data DisDispensableGeneric :routed_doseform_generic_id, :strength, :strength_doseunit_id, :per_strength, :per_doseunit_id, :name, :release_status_id, :status_id, :datasource_id

@@ -1,0 +1,17 @@
+<%= simple_form_for(@dis_routed_generic) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :generic_id %>
+    <%= f.input :route_id %>
+    <%= f.input :is_combination %>
+    <%= f.input :pregnancy_category_id %>
+    <%= f.input :release_status_id %>
+    <%= f.input :status_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Save" %>
+  </div>
+<% end %>

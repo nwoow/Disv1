@@ -1,0 +1,2 @@
+module DisBrandnamesHelper
+end

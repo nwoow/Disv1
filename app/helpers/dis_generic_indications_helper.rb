@@ -1,0 +1,2 @@
+module DisGenericIndicationsHelper
+end

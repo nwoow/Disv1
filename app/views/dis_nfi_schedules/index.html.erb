@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Nfi Schedules</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Datasource</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_nfi_schedules.each do |dis_nfi_schedule| %>
+      <tr>
+        <td><%= dis_nfi_schedule.name %></td>
+        <td><%= dis_nfi_schedule.description %></td>
+        <td><%= dis_nfi_schedule.datasource_id %></td>
+        <td><%= dis_nfi_schedule.status_id %></td>
+        <td><%= link_to 'Show', dis_nfi_schedule %>,<%= link_to 'Edit', edit_dis_nfi_schedule_path(dis_nfi_schedule) %>,<%= link_to 'Destroy', dis_nfi_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Nfi Schedule', new_dis_nfi_schedule_path %>

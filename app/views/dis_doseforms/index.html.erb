@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Doseforms</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <!-- <th>Id</th> -->
+      <th>Name</th>
+      <th>Abbrev</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_doseforms.each do |dis_doseform| %>
+      <tr>
+        <!-- <td><%= dis_doseform.id %></td> -->
+        <td><%= dis_doseform.name %></td>
+        <td><%= dis_doseform.abbrev %></td>
+        <td><%= dis_doseform.status_id %></td>
+        <td><%= link_to 'Show', dis_doseform %>,<%= link_to 'Edit', edit_dis_doseform_path(dis_doseform) %>,<%= link_to 'Destroy', dis_doseform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create New', new_dis_doseform_path %>

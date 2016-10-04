@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Combination Doses</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Combination doses</th>
+      <th>Combination dose</th>
+      <th>Combination dose name</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @combination_doses.each do |combination_dose| %>
+      <tr>
+        <td><%= combination_dose.combination_doses_id %></td>
+        <td><%= combination_dose.combination_dose_id %></td>
+        <td><%= combination_dose.combination_dose_name %></td>
+        <td><%= combination_dose.status %></td>
+        <td><%= link_to 'Show', combination_dose %>,<%= link_to 'Edit', edit_combination_dose_path(combination_dose) %>,<%= link_to 'Destroy', combination_dose, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Combination Dose', new_combination_dose_path %>

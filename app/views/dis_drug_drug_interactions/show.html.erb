@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Generic id1:</strong>
+  <%= @dis_drug_drug_interaction.generic_id1 %>
+</p>
+
+<p>
+  <strong>Generic id2:</strong>
+  <%= @dis_drug_drug_interaction.generic_id2 %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dis_drug_drug_interaction.description %>
+</p>
+
+<p>
+  <strong>Severity:</strong>
+  <%= @dis_drug_drug_interaction.severity %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_drug_drug_interaction.status_id %>
+</p>
+
+<p>
+  <strong>Datasource:</strong>
+  <%= @dis_drug_drug_interaction.datasource_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_drug_drug_interaction_path(@dis_drug_drug_interaction) %> |
+<%= link_to 'Back', dis_drug_drug_interactions_path %>

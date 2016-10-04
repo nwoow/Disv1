@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @dis_brandname.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dis_brandname.name %>
+</p>
+
+<p>
+  <strong>Release status:</strong>
+  <%= @dis_brandname.release_status_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_brandname.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_brandname_path(@dis_brandname) %> |
+<%= link_to 'Back', dis_brandnames_path %>

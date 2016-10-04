@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @dis_doseunit_convertion.id %>
+</p>
+
+<p>
+  <strong>From doseunit:</strong>
+  <%= @dis_doseunit_convertion.from_doseunit_id %>
+</p>
+
+<p>
+  <strong>To doseunit:</strong>
+  <%= @dis_doseunit_convertion.to_doseunit_id %>
+</p>
+
+<p>
+  <strong>Conv factor:</strong>
+  <%= @dis_doseunit_convertion.conv_factor %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_doseunit_convertion.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_doseunit_convertion_path(@dis_doseunit_convertion) %> |
+<%= link_to 'Back', dis_doseunit_convertions_path %>

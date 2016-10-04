@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Indiastates</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Abbrev</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_indiastates.each do |dis_indiastate| %>
+      <tr>
+        <td><%= dis_indiastate.id %></td>
+        <td><%= dis_indiastate.name %></td>
+        <td><%= dis_indiastate.abbrev %></td>
+        <td><%= link_to 'Show', dis_indiastate %>,<%= link_to 'Edit', edit_dis_indiastate_path(dis_indiastate) %>,<%= link_to 'Destroy', dis_indiastate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Indiastate', new_dis_indiastate_path %>

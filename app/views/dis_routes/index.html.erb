@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Routes</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Abbrev</th>
+      <th>Adverb</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_routes.each do |dis_route| %>
+      <tr>
+        <td><%= dis_route.id %></td>
+        <td><%= dis_route.name %></td>
+        <td><%= dis_route.abbrev %></td>
+        <td><%= dis_route.adverb %></td>
+        <td><%= dis_route.status_id %></td>
+        <td><%= link_to 'Show', dis_route %>,<%= link_to 'Edit', edit_dis_route_path(dis_route) %>,<%= link_to 'Destroy', dis_route, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Route', new_dis_route_path %>

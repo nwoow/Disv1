@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Combination contents:</strong>
+  <%= @combination_content.combination_contents_id %>
+</p>
+
+<p>
+  <strong>Combination generic:</strong>
+  <%= @combination_content.combination_generic_id %>
+</p>
+
+<p>
+  <strong>Constituent generic:</strong>
+  <%= @combination_content.constituent_generic_id %>
+</p>
+
+<p>
+  <strong>Constituent strength:</strong>
+  <%= @combination_content.constituent_strength %>
+</p>
+
+<p>
+  <strong>Uom:</strong>
+  <%= @combination_content.uom_id %>
+</p>
+
+<p>
+  <strong>Combination dose:</strong>
+  <%= @combination_content.combination_dose_id %>
+</p>
+
+<p>
+  <strong>Data source:</strong>
+  <%= @combination_content.data_source_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @combination_content.status %>
+</p>
+
+<%= link_to 'Edit', edit_combination_content_path(@combination_content) %> |
+<%= link_to 'Back', combination_contents_path %>

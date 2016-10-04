@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Doseunits</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Abbrev</th>
+      <th>Dosetype</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_doseunits.each do |dis_doseunit| %>
+      <tr>
+        <td><%= dis_doseunit.id %></td>
+        <td><%= dis_doseunit.name %></td>
+        <td><%= dis_doseunit.abbrev %></td>
+        <td><%= dis_doseunit.dosetype_id %></td>
+        <td><%= dis_doseunit.status_id %></td>
+        <td><%= link_to 'Show', dis_doseunit %>,<%= link_to 'Edit', edit_dis_doseunit_path(dis_doseunit) %>,<%= link_to 'Destroy', dis_doseunit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Doseunit', new_dis_doseunit_path %>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Routed Doseform Generics</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Generic</th>
+      <th>Rtd gen</th>
+      <th>Route</th>
+      <th>Doseform</th>
+      <th>Name</th>
+      <th>Monograph</th>
+      <th>Status</th>
+      <th>Release status</th>
+      <th>Is combination</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_routed_doseform_generics.each do |dis_routed_doseform_generic| %>
+      <tr>
+        <td><%= dis_routed_doseform_generic.generic_id %></td>
+        <td><%= dis_routed_doseform_generic.rtd_gen_id %></td>
+        <td><%= dis_routed_doseform_generic.route_id %></td>
+        <td><%= dis_routed_doseform_generic.doseform_id %></td>
+        <td><%= dis_routed_doseform_generic.name %></td>
+        <td><%= dis_routed_doseform_generic.monograph_id %></td>
+        <td><%= dis_routed_doseform_generic.status_id %></td>
+        <td><%= dis_routed_doseform_generic.release_status_id %></td>
+        <td><%= dis_routed_doseform_generic.is_combination %></td>
+        <td><%= link_to 'Show', dis_routed_doseform_generic %>,<%= link_to 'Edit', edit_dis_routed_doseform_generic_path(dis_routed_doseform_generic) %>,<%= link_to 'Destroy', dis_routed_doseform_generic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Routed Doseform Generic', new_dis_routed_doseform_generic_path %>

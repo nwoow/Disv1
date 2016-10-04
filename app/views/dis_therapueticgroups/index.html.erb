@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Therapueticgroups</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>System</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_therapueticgroups.each do |dis_therapueticgroup| %>
+      <tr>
+        <td><%= dis_therapueticgroup.id %></td>
+        <td><%= dis_therapueticgroup.name %></td>
+        <td><%= dis_therapueticgroup.system_id %></td>
+        <td><%= dis_therapueticgroup.status_id %></td>
+        <td><%= link_to 'Show', dis_therapueticgroup %>,<%= link_to 'Edit', edit_dis_therapueticgroup_path(dis_therapueticgroup) %>,<%= link_to 'Destroy', dis_therapueticgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Therapueticgroup', new_dis_therapueticgroup_path %>

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Routed Generics</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Generic</th>
+      <th>Route</th>
+      <th>Is combination</th>
+      <th>Pregnancy category</th>
+      <th>Release status</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_routed_generics.each do |dis_routed_generic| %>
+      <tr>
+        <td><%= dis_routed_generic.id %></td>
+        <td><%= dis_routed_generic.name %></td>
+        <td><%= dis_routed_generic.generic_id %></td>
+        <td><%= dis_routed_generic.route_id %></td>
+        <td><%= dis_routed_generic.is_combination %></td>
+        <td><%= dis_routed_generic.pregnancy_category_id %></td>
+        <td><%= dis_routed_generic.release_status_id %></td>
+        <td><%= dis_routed_generic.status_id %></td>
+        <td><%= link_to 'Show', dis_routed_generic %>,<%= link_to 'Edit', edit_dis_routed_generic_path(dis_routed_generic) %>,<%= link_to 'Destroy', dis_routed_generic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Routed Generic', new_dis_routed_generic_path %>

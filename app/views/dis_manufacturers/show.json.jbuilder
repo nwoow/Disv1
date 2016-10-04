@@ -1,0 +1,1 @@
+json.extract! @dis_manufacturer, :id, :id, :name, :address1, :address2, :city, :state_id, :pin, :phone, :fax, :email, :website, :mobilephoe, :abbrev, :phone2, :release_status_id, :status_id, :created_at, :updated_at

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @dis_doseunit.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dis_doseunit.name %>
+</p>
+
+<p>
+  <strong>Abbrev:</strong>
+  <%= @dis_doseunit.abbrev %>
+</p>
+
+<p>
+  <strong>Dosetype:</strong>
+  <%= @dis_doseunit.dosetype_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_doseunit.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_doseunit_path(@dis_doseunit) %> |
+<%= link_to 'Back', dis_doseunits_path %>

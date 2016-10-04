@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Generic Monographs</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Generic</th>
+      <th>Dose</th>
+      <th>Contraindication</th>
+      <th>Precaution</th>
+      <th>Adverse effect</th>
+      <th>Storage</th>
+      <th>Datasource</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_generic_monographs.each do |dis_generic_monograph| %>
+      <tr>
+        <td><%= dis_generic_monograph.generic_id %></td>
+        <td><%= dis_generic_monograph.dose %></td>
+        <td><%= dis_generic_monograph.contraindication %></td>
+        <td><%= dis_generic_monograph.precaution %></td>
+        <td><%= dis_generic_monograph.adverse_effect %></td>
+        <td><%= dis_generic_monograph.storage %></td>
+        <td><%= dis_generic_monograph.datasource_id %></td>
+        <td><%= dis_generic_monograph.status_id %></td>
+        <td><%= link_to 'Show', dis_generic_monograph %>,<%= link_to 'Edit', edit_dis_generic_monograph_path(dis_generic_monograph) %>,<%= link_to 'Destroy', dis_generic_monograph, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Generic Monograph', new_dis_generic_monograph_path %>

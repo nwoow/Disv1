@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Drug Drug Interactions</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Generic id1</th>
+      <th>Generic id2</th>
+      <th>Description</th>
+      <th>Severity</th>
+      <th>Status</th>
+      <th>Datasource</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_drug_drug_interactions.each do |dis_drug_drug_interaction| %>
+      <tr>
+        <td><%= dis_drug_drug_interaction.generic_id1 %></td>
+        <td><%= dis_drug_drug_interaction.generic_id2 %></td>
+        <td><%= dis_drug_drug_interaction.description %></td>
+        <td><%= dis_drug_drug_interaction.severity %></td>
+        <td><%= dis_drug_drug_interaction.status_id %></td>
+        <td><%= dis_drug_drug_interaction.datasource_id %></td>
+        <td><%= link_to 'Show', dis_drug_drug_interaction %>,<%= link_to 'Edit', edit_dis_drug_drug_interaction_path(dis_drug_drug_interaction) %>,<%= link_to 'Destroy', dis_drug_drug_interaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Drug Drug Interaction', new_dis_drug_drug_interaction_path %>

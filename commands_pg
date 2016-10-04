@@ -1,0 +1,46 @@
+##################### POSTGRES COMMANDS #################################
+
+# Switch to postgres user. All commands will have to be run as postgres user only
+$ sudo su postgres
+
+# Connect to the server.
+$ psql -d {database} -U {user-name}
+
+# disconnect from server
+postgres=# \q
+
+# Backup any database: To be run as postgres user
+$ pg_dump -U <user-name> <source_db> -f <dumpfilename.sql>
+
+#  Restore any database from a dumpfile created by previous commans: To be run as a postgres user
+$ psql -U <user-name> -d <desintation_db>-f <dumpfilename.sql>
+
+# Dump selected table only
+$ pg_dump --data-only --table={tablename} {sourcedb} > {file name}
+
+#Restore above dumped file
+$ psql {destdb} < {file name}
+
+
+# Create a squence in an existing table.column. This will autoincrement the column.
+
+# Execute a sql function
+SELECT "<function_name>"( '<arguements>' );
+
+# Set a column as auto-increment in a table
+CREATE SEQUENCE dis_doseperiods_id_seq;
+ALTER TABLE dis_doseperiods ALTER COLUMN id SET NOT NULL;
+ALTER TABLE dis_doseperiods ALTER COLUMN id SET DEFAULT nextval('dis_doseperiods_id_seq'::regclass);
+
+# populate existing column with the default value where it is null
+UPDATE {table} SET {column} = DEFAULT WHERE column IS NULL
+
+# Update an existing datetime field with the current time
+UPDATE dis_generics SET updated_at = now();
+
+# Update an existing column with a value (4)
+UPDATE dis_doseperiods SET datasource_id = 2;
+
+# Manage a primary key constaint
+ALTER TABLE dis_foodintakes ADD CONSTRAINT ddb_drugfoodintake_pkey PRIMARY KEY (id)
+ALTER TABLE {table} DROP CONSTRAINT {key_name_pkey}

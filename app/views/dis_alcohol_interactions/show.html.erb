@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dis_alcohol_interaction.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dis_alcohol_interaction.description %>
+</p>
+
+<p>
+  <strong>Datasource:</strong>
+  <%= @dis_alcohol_interaction.datasource_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_alcohol_interaction_path(@dis_alcohol_interaction) %> |
+<%= link_to 'Back', dis_alcohol_interactions_path %>

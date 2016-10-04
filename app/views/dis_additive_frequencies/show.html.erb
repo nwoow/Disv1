@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dis_additive_frequency.name %>
+</p>
+
+<p>
+  <strong>Frequency value:</strong>
+  <%= @dis_additive_frequency.frequency_value %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_additive_frequency.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_additive_frequency_path(@dis_additive_frequency) %> |
+<%= link_to 'Back', dis_additive_frequencies_path %>

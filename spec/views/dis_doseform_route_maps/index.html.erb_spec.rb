@@ -1,0 +1,25 @@
+require 'rails_helper'
+
+RSpec.describe "dis_doseform_route_maps/index", type: :view do
+  before(:each) do
+    assign(:dis_doseform_route_maps, [
+      DisDoseformRouteMap.create!(
+        :doseform_id => 1,
+        :route_id => 2,
+        :status_id => 3
+      ),
+      DisDoseformRouteMap.create!(
+        :doseform_id => 1,
+        :route_id => 2,
+        :status_id => 3
+      )
+    ])
+  end
+
+  it "renders a list of dis_doseform_route_maps" do
+    render
+    assert_select "tr>td", :text => 1.to_s, :count => 2
+    assert_select "tr>td", :text => 2.to_s, :count => 2
+    assert_select "tr>td", :text => 3.to_s, :count => 2
+  end
+end

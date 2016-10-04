@@ -1,0 +1,20 @@
+<p id="notice"><%%= notice %></p>
+<h1><%= name %></h1>
+<table id="<%= name %>" , data-source="<%%= <%= file_name %>s_path(format: :json) %>"class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+       <%
+        name1.each do |action| %>
+         <th><%= action %></th>
+        <% end %>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+
+<br>
+
+<%%= link_to 'New <%= file_name.titleize %>', new_<%= file_name %>_path %>

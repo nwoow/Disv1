@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Generic Indications</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Generic</th>
+      <th>Status</th>
+      <th>Indication</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_generic_indications.each do |dis_generic_indication| %>
+      <tr>
+        <td><%= dis_generic_indication.id %></td>
+        <td><%= dis_generic_indication.generic_id %></td>
+        <td><%= dis_generic_indication.status_id %></td>
+        <td><%= dis_generic_indication.indication_id %></td>
+        <td><%= link_to 'Show', dis_generic_indication %>,<%= link_to 'Edit', edit_dis_generic_indication_path(dis_generic_indication) %>,<%= link_to 'Destroy', dis_generic_indication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add New', new_dis_generic_indication_path %>

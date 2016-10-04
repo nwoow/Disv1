@@ -1,0 +1,19 @@
+<%= simple_form_for(@dis_routed_doseform_generic) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :generic_id %>
+    <%= f.input :rtd_gen_id %>
+    <%= f.input :route_id %>
+    <%= f.input :doseform_id %>
+    <%= f.input :name %>
+    <%= f.input :monograph_id %>
+    <%= f.input :status_id %>
+    <%= f.input :release_status_id %>
+    <%= f.input :is_combination %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

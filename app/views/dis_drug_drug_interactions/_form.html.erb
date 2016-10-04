@@ -1,0 +1,16 @@
+<%= simple_form_for(@dis_drug_drug_interaction) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :generic_id1 %>
+    <%= f.input :generic_id2 %>
+    <%= f.input :description %>
+    <%= f.input :severity %>
+    <%= f.input :status_id %>
+    <%= f.input :datasource_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

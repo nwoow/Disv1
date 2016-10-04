@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Statuses</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_statuses.each do |dis_status| %>
+      <tr>
+        <td><%= dis_status.id %></td>
+        <td><%= dis_status.name %></td>
+        <td><%= link_to 'Show', dis_status %>,<%= link_to 'Edit', edit_dis_status_path(dis_status) %>,<%= link_to 'Destroy', dis_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Status', new_dis_status_path %>

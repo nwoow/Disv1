@@ -1,0 +1,2 @@
+module DisIngredientsHelper
+end

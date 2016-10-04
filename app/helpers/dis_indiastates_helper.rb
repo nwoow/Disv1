@@ -1,0 +1,2 @@
+module DisIndiastatesHelper
+end

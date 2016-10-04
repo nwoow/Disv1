@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Packagetypes</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_packagetypes.each do |dis_packagetype| %>
+      <tr>
+        <td><%= dis_packagetype.id %></td>
+        <td><%= dis_packagetype.name %></td>
+        <td><%= dis_packagetype.status_id %></td>
+        <td><%= link_to 'Show', dis_packagetype %>,<%= link_to 'Edit', edit_dis_packagetype_path(dis_packagetype) %>,<%= link_to 'Destroy', dis_packagetype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Packagetype', new_dis_packagetype_path %>

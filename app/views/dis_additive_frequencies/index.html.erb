@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Additive Frequencies</h1>
+
+<table id="Additive-Frequencies" , data-source="<%= dis_additive_frequencies_path(format: :json) %>"class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Frequency value</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Additive Frequency', new_dis_additive_frequency_path %>

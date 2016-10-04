@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Alcohol Interactions</h1>
+
+<table id="Alcohol-Interactions" , data-source="<%= dis_alcohol_interactions_path(format: :json) %>"class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Datasource</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Alcohol Interaction', new_dis_alcohol_interaction_path %>

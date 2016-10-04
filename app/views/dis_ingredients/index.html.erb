@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Ingredients</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_ingredients.each do |dis_ingredient| %>
+      <tr>
+        <td><%= dis_ingredient.id %></td>
+        <td><%= dis_ingredient.name %></td>
+        <td><%= dis_ingredient.status_id %></td>
+        <td><%= link_to 'Show', dis_ingredient %>,<%= link_to 'Edit', edit_dis_ingredient_path(dis_ingredient) %>,<%= link_to 'Destroy', dis_ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Ingredient', new_dis_ingredient_path %>

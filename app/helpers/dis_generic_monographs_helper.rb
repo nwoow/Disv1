@@ -1,0 +1,2 @@
+module DisGenericMonographsHelper
+end

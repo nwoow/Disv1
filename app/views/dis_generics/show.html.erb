@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dis_generic.name %>
+</p>
+
+<p>
+  <strong>Is combination:</strong>
+  <%= @dis_generic.is_combination %>
+</p>
+
+<p>
+  <strong>Rxcui:</strong>
+  <%= @dis_generic.rxcui %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_generic.status_id %>
+</p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @dis_generic.food_id %>
+</p>
+
+<p>
+  <strong>Hepatic:</strong>
+  <%= @dis_generic.hepatic_id %>
+</p>
+
+<p>
+  <strong>Renal imp:</strong>
+  <%= @dis_generic.renal_imp_id %>
+</p>
+
+<p>
+  <strong>Release status:</strong>
+  <%= @dis_generic.release_status_id %>
+</p>
+
+<p>
+  <strong>Is essential:</strong>
+  <%= @dis_generic.is_essential %>
+</p>
+
+<%= link_to 'Edit', edit_dis_generic_path(@dis_generic) %> |
+<%= link_to 'Back', dis_generics_path %>

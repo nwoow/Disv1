@@ -1,0 +1,19 @@
+<%= simple_form_for(@dis_generic) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :is_combination %>
+    <%= f.input :is_essential %>
+    <%= f.input :rxcui %>
+    <%= f.input :food_id %>
+    <%= f.input :hepatic_id %>
+    <%= f.input :renal_imp_id %>
+    <%= f.input :datasource_id %>
+    <%= f.input :status_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Save" %>
+  </div>
+<% end %>

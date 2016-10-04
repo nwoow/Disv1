@@ -1,0 +1,13 @@
+<%= simple_form_for(@dis_additive_frequency) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :frequency_value %>
+    <%= f.input :status_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

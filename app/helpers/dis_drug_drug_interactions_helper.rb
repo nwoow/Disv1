@@ -1,0 +1,2 @@
+module DisDrugDrugInteractionsHelper
+end

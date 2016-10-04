@@ -1,0 +1,15 @@
+<%= simple_form_for(@dis_doseperiod) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :is_common %>
+    <%= f.input :abbrev %>
+    <%= f.input :status_id %>
+    <%= f.input :datasource_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

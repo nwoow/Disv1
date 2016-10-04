@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Manufacturers</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Pin</th>
+      <th>Phone</th>
+      <th>Fax</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th>Mobilephone</th>
+      <th>Abbrev</th>
+      <th>Phone2</th>
+      <th>Release status</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_manufacturers.each do |dis_manufacturer| %>
+      <tr>
+        <td><%= dis_manufacturer.id %></td>
+        <td><%= dis_manufacturer.name %></td>
+        <td><%= dis_manufacturer.address1 %></td>
+        <td><%= dis_manufacturer.address2 %></td>
+        <td><%= dis_manufacturer.city %></td>
+        <td><%= dis_manufacturer.state_id %></td>
+        <td><%= dis_manufacturer.pin %></td>
+        <td><%= dis_manufacturer.phone %></td>
+        <td><%= dis_manufacturer.fax %></td>
+        <td><%= dis_manufacturer.email %></td>
+        <td><%= dis_manufacturer.website %></td>
+        <td><%= dis_manufacturer.mobilephone %></td>
+        <td><%= dis_manufacturer.abbrev %></td>
+        <td><%= dis_manufacturer.phone2 %></td>
+        <td><%= dis_manufacturer.release_status_id %></td>
+        <td><%= dis_manufacturer.status_id %></td>
+        <td><%= link_to 'Show', dis_manufacturer %>,<%= link_to 'Edit', edit_dis_manufacturer_path(dis_manufacturer) %>,<%= link_to 'Destroy', dis_manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Manufacturer', new_dis_manufacturer_path %>

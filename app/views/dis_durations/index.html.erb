@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Durations</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_durations.each do |dis_duration| %>
+      <tr>
+        <td><%= dis_duration.id %></td>
+        <td><%= dis_duration.description %></td>
+        <td><%= dis_duration.status_id %></td>
+        <td><%= link_to 'Show', dis_duration %>,<%= link_to 'Edit', edit_dis_duration_path(dis_duration) %>,<%= link_to 'Destroy', dis_duration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add New', new_dis_duration_path %>

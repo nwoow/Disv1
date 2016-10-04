@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @dis_packagetype.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dis_packagetype.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_packagetype.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_packagetype_path(@dis_packagetype) %> |
+<%= link_to 'Back', dis_packagetypes_path %>

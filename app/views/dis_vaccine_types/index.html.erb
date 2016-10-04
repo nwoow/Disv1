@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Vaccine Types</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Has packagedrug</th>
+      <th>Status</th>
+      <th>Datasource</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_vaccine_types.each do |dis_vaccine_type| %>
+      <tr>
+        <td><%= dis_vaccine_type.name %></td>
+        <td><%= dis_vaccine_type.description %></td>
+        <td><%= dis_vaccine_type.has_packagedrug %></td>
+        <td><%= dis_vaccine_type.status_id %></td>
+        <td><%= dis_vaccine_type.datasource_id %></td>
+        <td><%= link_to 'Show', dis_vaccine_type %>,<%= link_to 'Edit', edit_dis_vaccine_type_path(dis_vaccine_type) %>,<%= link_to 'Destroy', dis_vaccine_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Vaccine Type', new_dis_vaccine_type_path %>

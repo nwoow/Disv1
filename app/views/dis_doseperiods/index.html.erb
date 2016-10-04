@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Doseperiods</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Is common</th>
+      <th>Abbrev</th>
+      <th>Status</th>
+      <th>Datasource</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_doseperiods.each do |dis_doseperiod| %>
+      <tr>
+        <td><%= dis_doseperiod.name %></td>
+        <td><%= dis_doseperiod.is_common %></td>
+        <td><%= dis_doseperiod.abbrev %></td>
+        <td><%= dis_doseperiod.status_id %></td>
+        <td><%= dis_doseperiod.datasource_id %></td>
+        <td><%= link_to 'Show', dis_doseperiod %>,<%= link_to 'Edit', edit_dis_doseperiod_path(dis_doseperiod) %>,<%= link_to 'Destroy', dis_doseperiod, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Doseperiod', new_dis_doseperiod_path %>

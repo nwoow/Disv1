@@ -1,0 +1,19 @@
+<%= simple_form_for(@dis_dispensable_generic) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :routed_doseform_generic_id %>
+    <%= f.input :strength %>
+    <%= f.input :strength_doseunit_id %>
+    <%= f.input :per_strength %>
+    <%= f.input :per_doseunit_id %>
+    <%= f.input :name %>
+    <%= f.input :release_status_id %>
+    <%= f.input :status_id %>
+    <%= f.input :datasource_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

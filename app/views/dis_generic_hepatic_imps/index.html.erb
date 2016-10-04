@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Generic Hepatic Imps</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Generic</th>
+      <th>Warning</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Datasource</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_generic_hepatic_imps.each do |dis_generic_hepatic_imp| %>
+      <tr>
+        <td><%= dis_generic_hepatic_imp.generic_id %></td>
+        <td><%= dis_generic_hepatic_imp.warning %></td>
+        <td><%= dis_generic_hepatic_imp.description %></td>
+        <td><%= dis_generic_hepatic_imp.status_id %></td>
+        <td><%= dis_generic_hepatic_imp.datasource_id %></td>
+        <td><%= link_to 'Show', dis_generic_hepatic_imp %>,<%= link_to 'Edit', edit_dis_generic_hepatic_imp_path(dis_generic_hepatic_imp) %>,<%= link_to 'Destroy', dis_generic_hepatic_imp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Generic Hepatic Imp', new_dis_generic_hepatic_imp_path %>

@@ -1,0 +1,1 @@
+json.extract! @dis_dispensable_generic, :id, :routed_doseform_generic_id, :strength, :strength_doseunit_id, :per_strength, :per_doseunit_id, :name, :release_status_id, :status_id, :datasource_id, :created_at, :updated_at

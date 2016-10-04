@@ -1,0 +1,13 @@
+<%= simple_form_for(@dis_doseform_route_map) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :doseform_id %>
+    <%= f.input :route_id %>
+    <%= f.input :status_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

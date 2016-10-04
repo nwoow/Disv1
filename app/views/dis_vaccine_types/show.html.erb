@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dis_vaccine_type.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dis_vaccine_type.description %>
+</p>
+
+<p>
+  <strong>Has packagedrug:</strong>
+  <%= @dis_vaccine_type.has_packagedrug %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_vaccine_type.status_id %>
+</p>
+
+<p>
+  <strong>Datasource:</strong>
+  <%= @dis_vaccine_type.datasource_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_vaccine_type_path(@dis_vaccine_type) %> |
+<%= link_to 'Back', dis_vaccine_types_path %>

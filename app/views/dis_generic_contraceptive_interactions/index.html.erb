@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Generic Contraceptive Interactions</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Generic</th>
+      <th>Description</th>
+      <th>Datasource</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_generic_contraceptive_interactions.each do |dis_generic_contraceptive_interaction| %>
+      <tr>
+        <td><%= dis_generic_contraceptive_interaction.generic_id %></td>
+        <td><%= dis_generic_contraceptive_interaction.description %></td>
+        <td><%= dis_generic_contraceptive_interaction.datasource_id %></td>
+        <td><%= dis_generic_contraceptive_interaction.status_id %></td>
+        <td><%= link_to 'Show', dis_generic_contraceptive_interaction %>,<%= link_to 'Edit', edit_dis_generic_contraceptive_interaction_path(dis_generic_contraceptive_interaction) %>,<%= link_to 'Destroy', dis_generic_contraceptive_interaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Generic Contraceptive Interaction', new_dis_generic_contraceptive_interaction_path %>

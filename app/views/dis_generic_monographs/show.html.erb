@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Generic:</strong>
+  <%= @dis_generic_monograph.generic_id %>
+</p>
+
+<p>
+  <strong>Dose:</strong>
+  <%= @dis_generic_monograph.dose %>
+</p>
+
+<p>
+  <strong>Contraindication:</strong>
+  <%= @dis_generic_monograph.contraindication %>
+</p>
+
+<p>
+  <strong>Precaution:</strong>
+  <%= @dis_generic_monograph.precaution %>
+</p>
+
+<p>
+  <strong>Adverse effect:</strong>
+  <%= @dis_generic_monograph.adverse_effect %>
+</p>
+
+<p>
+  <strong>Storage:</strong>
+  <%= @dis_generic_monograph.storage %>
+</p>
+
+<p>
+  <strong>Datasource:</strong>
+  <%= @dis_generic_monograph.datasource_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_generic_monograph.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_generic_monograph_path(@dis_generic_monograph) %> |
+<%= link_to 'Back', dis_generic_monographs_path %>

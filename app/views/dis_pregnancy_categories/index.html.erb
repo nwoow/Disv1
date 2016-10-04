@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Pregnancy Categories</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_pregnancy_categories.each do |dis_pregnancy_category| %>
+      <tr>
+        <td><%= dis_pregnancy_category.id %></td>
+        <td><%= dis_pregnancy_category.name %></td>
+        <td><%= dis_pregnancy_category.description %></td>
+        <td><%= dis_pregnancy_category.status_id %></td>
+        <td><%= link_to 'Show', dis_pregnancy_category %>,<%= link_to 'Edit', edit_dis_pregnancy_category_path(dis_pregnancy_category) %>,<%= link_to 'Destroy', dis_pregnancy_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Pregnancy Category', new_dis_pregnancy_category_path %>

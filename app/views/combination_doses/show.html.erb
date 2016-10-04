@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Combination doses:</strong>
+  <%= @combination_dose.combination_doses_id %>
+</p>
+
+<p>
+  <strong>Combination dose:</strong>
+  <%= @combination_dose.combination_dose_id %>
+</p>
+
+<p>
+  <strong>Combination dose name:</strong>
+  <%= @combination_dose.combination_dose_name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @combination_dose.status %>
+</p>
+
+<%= link_to 'Edit', edit_combination_dose_path(@combination_dose) %> |
+<%= link_to 'Back', combination_doses_path %>

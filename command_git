@@ -1,0 +1,36 @@
+##################### GIT COMMANDS #################################
+#Pull a project in the beginning
+git pull "<URL of the project>"
+#Update your local branch before pushing
+git pull
+
+# Check the local file changes
+git status
+# Add changed files to the index for committing
+git add -A
+#Store the added files to the commit queue with a message of the changes ready for push
+git commit -m "<message or comment>"
+#Push the committed file to the repository
+git push
+
+# create a branch locally. Automatically changes to the new branch
+$ git checkout -b <branch name>
+
+# Push the
+$ git push origin <branch name>
+
+# List branches. The current one will be marked wth asterix
+$ git branch
+
+# Change to branch "7apr2016'
+git fetch && git checkout 7apr2016
+# Change back to master
+$ git fetch && git checkout master
+
+# Viewing and creating tags
+$ git tag
+$ git tag -a <tag name> -m "<comment>"
+
+# push tag ro repository
+$ git push origin <tag name>
+$ git push origin --tags

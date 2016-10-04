@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Doseform Route Maps</h1>
+
+<table id="example" class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Doseform</th>
+      <th>Route</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_doseform_route_maps.each do |dis_doseform_route_map| %>
+      <tr>
+        <td><%= dis_doseform_route_map.doseform_id %></td>
+        <td><%= dis_doseform_route_map.route_id %></td>
+        <td><%= dis_doseform_route_map.status_id %></td>
+        <td><%= link_to 'Show', dis_doseform_route_map %>,<%= link_to 'Edit', edit_dis_doseform_route_map_path(dis_doseform_route_map) %>,<%= link_to 'Destroy', dis_doseform_route_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Doseform Route Map', new_dis_doseform_route_map_path %>

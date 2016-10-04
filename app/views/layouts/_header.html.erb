@@ -1,0 +1,75 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "DIS", root_url, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+
+
+        <% if user_signed_in? %>
+    <li class="dropdown">
+          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Menu
+            <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li>Masters</li>
+            <li><%=link_to "Routes", dis_routes_path%></li>
+            <li><%=link_to "Doseforms", dis_doseforms_path %></li>
+            <li><%=link_to "Dose Units", dis_doseunits_path%></li>
+            <li><%=link_to "NFI Schedules", dis_nfi_schedules_path%></li>
+            <li><%=link_to "Pregnancy Categories", dis_pregnancy_categories_path%></li>
+            <li><%=link_to "Food Intakes", dis_foodintakes_path%></li>
+            <li><%=link_to "Alcohol Interactions", dis_alcohol_interactions_path%></li>
+            <li><%=link_to "Indications", dis_indications_path%></li>
+            <li><%=link_to "Ingredients", dis_ingredients_path%></li>
+            <li><%=link_to "Package Types", dis_packagetypes_path%></li>
+            <li><%=link_to "Systems", dis_systems_path%></li>
+            <li><%=link_to "Therapuetic Groups", dis_therapueticgroups_path%></li>
+            <li><%=link_to "Doseperiods", dis_doseperiods_path%></li>
+            <li><%=link_to "Durations", dis_durations_path%></li>
+            <li><%=link_to "Additive Frequencies", dis_additive_frequencies_path%></li>
+            <li><%=link_to "Vaccine Types", dis_vaccine_types_path%></li>
+            <li>Generics</li>
+            <li><%=link_to "Generics", dis_generics_path%></li>
+            <li><%=link_to "Routed Generics", dis_routed_generics_path%></li>
+            <li><%=link_to "Routed Doseform Generics", dis_routed_doseform_generics_path%></li>
+            <li><%=link_to "Dispansable Generics", dis_dispensable_generics_path%></li>
+            <li>Branded Medicines</li>
+            <li><%=link_to "Brand Names", dis_brandnames_path%></li>
+            <li><%=link_to "Manufacturers", dis_manufacturers_path%></li>
+            <li>Common</li>
+            <li><%=link_to "Data Sources", dis_datasources_path%></li>
+            <li><%=link_to "Indian States", dis_indiastates_path%></li>
+            <li><%=link_to "Statuses", dis_statuses_path%></li>
+            <li>Mappings</li>
+            <li><%=link_to "Dosefom Doseunit Link", dis_doseform_doseunit_links_path%></li>
+            <li><%=link_to "Dose Unit Convertions", dis_doseunit_convertions_path%></li>
+            <li><%=link_to "Drug-drug Interactions", dis_drug_drug_interactions_path%></li>
+            <li><%=link_to "Duplicate Therapies", dis_duplicate_therapies_path%></li>
+            <li><%=link_to "Generic Alcohol Int", dis_generic_alcohol_interactions_path%></li>
+            <li><%=link_to "Generic Contraceptive Int", dis_generic_contraceptive_interactions_path%></li>
+            <li><%=link_to "Generic Indications", dis_generic_indications_path%></li>
+            <li><%=link_to "Generic Lactations", dis_generic_lactations_path%></li>
+            <li><%=link_to "Generic Monographs", dis_generic_monographs_path%></li>
+            <li><%=link_to "Hepatic Impairments", dis_generic_hepatic_imps_path%></li>
+            <li><%=link_to "Doseform Route Map   ", dis_doseform_route_maps_path%></li>
+            <li>Others</li>
+            <li><%=link_to "Combination Doses", combination_doses_path %></li>
+            <li><%=link_to "Combination Contents", combination_contents_path %></li>
+
+          </ul>
+        </li>
+         <li><%= link_to "Home",   root_path %></li>
+        <li><%= link_to "Help",   '#' %></li>
+
+        Logged in as <strong><%= current_user.email %></strong>.
+       <li> <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li> |
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+      <% else %>
+       <li> <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
+        <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+      <% end %>
+
+      </ul>
+    </nav>
+  </div>
+
+</header>

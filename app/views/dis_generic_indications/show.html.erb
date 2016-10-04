@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @dis_generic_indication.id %>
+</p>
+
+<p>
+  <strong>Generic:</strong>
+  <%= @dis_generic_indication.generic_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_generic_indication.status_id %>
+</p>
+
+<p>
+  <strong>Indication:</strong>
+  <%= @dis_generic_indication.indication_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_generic_indication_path(@dis_generic_indication) %> |
+<%= link_to 'Back', dis_generic_indications_path %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @dis_routed_generic.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dis_routed_generic.name %>
+</p>
+
+<p>
+  <strong>Generic:</strong>
+  <%= @dis_routed_generic.generic_id %>
+</p>
+
+<p>
+  <strong>Route:</strong>
+  <%= @dis_routed_generic.route_id %>
+</p>
+
+<p>
+  <strong>Is combination:</strong>
+  <%= @dis_routed_generic.is_combination %>
+</p>
+
+<p>
+  <strong>Pregnancy category:</strong>
+  <%= @dis_routed_generic.pregnancy_category_id %>
+</p>
+
+<p>
+  <strong>Release status:</strong>
+  <%= @dis_routed_generic.release_status_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_routed_generic.status_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_routed_generic_path(@dis_routed_generic) %> |
+<%= link_to 'Back', dis_routed_generics_path %>

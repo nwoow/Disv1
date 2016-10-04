@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Generic id1:</strong>
+  <%= @dis_duplicate_therapy.generic_id1 %>
+</p>
+
+<p>
+  <strong>Generic id2:</strong>
+  <%= @dis_duplicate_therapy.generic_id2 %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dis_duplicate_therapy.status_id %>
+</p>
+
+<p>
+  <strong>Datasource:</strong>
+  <%= @dis_duplicate_therapy.datasource_id %>
+</p>
+
+<%= link_to 'Edit', edit_dis_duplicate_therapy_path(@dis_duplicate_therapy) %> |
+<%= link_to 'Back', dis_duplicate_therapies_path %>

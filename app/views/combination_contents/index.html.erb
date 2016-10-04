@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Combination Contents</h1>
+
+<table id="users-table" , data-source="<%= combination_contents_path(format: :json) %>"class="table table-bordered table-hover table-striped datatable" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Combination contents</th>
+      <th>Combination generic</th>
+      <th>Constituent generic</th>
+      <th>Constituent strength</th>
+      <th>Uom</th>
+      <th>Combination dose</th>
+      <th>Data source</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Combination Content', new_combination_content_path %>
+
+
+<div ng-app="myApp1" ng-controller="customersCtrl1">
+
+<ul>
+  <li ng-repeat="x in myData">
+    {{ x.Name + ', ' + x.Country }}
+  </li>
+</ul>
+
+</div>
